@@ -1,15 +1,15 @@
 import CardContent from "./CardContent"
+import Headline from "../Headline"
 
 const FeaturedDestinations = () => {
   return (
     <div id="featured-destinations" className="flex flex-col justify-center items-start py-10 px-[135px] gap-12">
 
       {/* Headline  */}
-      <div id="headline" className="flex flex-col justify-center items-start gap-3">
-        <h2 className="font-bold text-5xl -tracking-[.5%]">Featured Destination</h2>
-        <h3 className="font-normal text-base text-[#3B3E44]">Popular destinations open to visitors from Indonesia</h3>
-      </div>
-
+      <Headline 
+        title="Featured Destination"
+        subheading="Popular destinations open to visitors from Indonesia"
+      />
       {/* Card Content  */}
       <div className="lg:grid lg:grid-cols-12 lg:grid-rows-12 gap-8 w-full flex flex-col items-center">
 
