@@ -11,17 +11,19 @@ const FeaturedDestinations = () => {
       </div>
 
       {/* Card Content  */}
-      <div className="grid grid-cols-12 grid-rows-12 gap-8 outline-black w-full h-[718px]">
-        <div className="grid grid-cols-12 gap-y-8 gap-x-14 col-span-9 row-span-12">
-          <div className="col-span-12 rounded-3xl bg-gray-200 p-7">
+      <div className="lg:grid lg:grid-cols-12 lg:grid-rows-12 gap-8 w-full flex flex-col items-center">
+
+        {/* Left Group  */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-y-8 gap-x-14 col-span-9 row-span-12">
+          <div className="lg:col-span-12 rounded-3xl bg-gray-200 p-7 h-[280px]">
             <CardContent 
               rating={3.5} 
               location='Barcelona, Spain' 
-              titleSize="text-4xl" 
+              titleSize="text-2xl md:text-4xl" 
               activities={196}
             />
           </div>
-          <div className="col-start-1 col-end-7 rounded-3xl bg-gray-200 py-3 px-7">
+          <div className="lg:col-start-1 lg:col-end-7 rounded-3xl bg-gray-200 py-3 px-7 h-96">
             <CardContent 
               rating={3.5} 
               location='London, UK' 
@@ -29,7 +31,7 @@ const FeaturedDestinations = () => {
               activities={25} 
             />
           </div>
-          <div className="col-start-7 col-end-13 rounded-3xl bg-gray-200 py-3 p-7">
+          <div className="lg:col-start-7 lg:col-end-13 rounded-3xl bg-gray-200 py-3 p-7 h-96">
           <CardContent 
               rating={3.5} 
               location='Paris, France' 
@@ -38,8 +40,10 @@ const FeaturedDestinations = () => {
             />
           </div>
         </div>
-        <div className="flex flex-col gap-6 col-span-3 row-span-12">
-          <div className="flex-1 rounded-3xl bg-gray-200 py-4 px-5">
+
+        {/* Right Group  */}
+        <div className="flex flex-col gap-6 col-span-3 row-span-12 h-full">
+          <div className="rounded-3xl bg-gray-200 py-4 px-5 h-60">
           <CardContent 
               rating={3.5} 
               location='Sydney, Australia' 
@@ -47,7 +51,7 @@ const FeaturedDestinations = () => {
               activities={25} 
             />
           </div>
-          <div className="flex-1 rounded-3xl bg-gray-200 py-4 px-5">
+          <div className="rounded-3xl bg-gray-200 py-4 px-5 h-56">
           <CardContent 
               rating={3.5} 
               location='Tokyo, Japan' 
@@ -55,7 +59,7 @@ const FeaturedDestinations = () => {
               activities={25} 
             />
           </div>
-          <div className="flex-1 rounded-3xl bg-gray-200 py-4 px-5">
+          <div className="rounded-3xl bg-gray-200 py-4 px-5 h-56">
           <CardContent 
               rating={3.5} 
               location='Hanoi, Vietnam' 

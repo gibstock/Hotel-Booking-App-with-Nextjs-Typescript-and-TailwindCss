@@ -7,7 +7,6 @@ type AppProps = {
 
 const CardContent = ({rating, location, titleSize, activities}: AppProps) => {
   return (
-    // <div className="flex flex-col justify-between col-span-12 rounded-3xl bg-gray-200 p-7">
     <div className="flex flex-col justify-between h-full">
       <div className="rating-container flex">
         <div className="card-rating text-red-700 font-bold text-lg bg-white rounded-2xl py-[2px] px-5 ">{rating}</div>
