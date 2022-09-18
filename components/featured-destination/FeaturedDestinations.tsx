@@ -3,7 +3,7 @@ import Headline from "../Headline"
 
 const FeaturedDestinations = () => {
   return (
-    <div id="featured-destinations" className="flex flex-col justify-center items-start py-10 px-[135px] gap-12">
+    <div id="featured-destinations" className="flex flex-col justify-center items-center py-10 px-5 gap-12 md:px-[135px] lg:items-start">
 
       {/* Headline  */}
       <Headline 
@@ -14,7 +14,7 @@ const FeaturedDestinations = () => {
       <div className="lg:grid lg:grid-cols-12 lg:grid-rows-12 gap-8 w-full flex flex-col items-center">
 
         {/* Left Group  */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-y-8 gap-x-14 col-span-9 row-span-12">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-y-8 gap-x-14 col-span-9 row-span-12 w-full">
           <div className="lg:col-span-12 rounded-3xl bg-gray-200 p-7 h-[280px]">
             <CardContent 
               rating={3.5} 
@@ -42,7 +42,7 @@ const FeaturedDestinations = () => {
         </div>
 
         {/* Right Group  */}
-        <div className="flex flex-col gap-6 col-span-3 row-span-12 h-full">
+        <div className="flex flex-col gap-6 col-span-3 row-span-12 h-full w-full">
           <div className="rounded-3xl bg-gray-200 py-4 px-5 h-60">
           <CardContent 
               rating={3.5} 

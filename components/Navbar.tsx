@@ -5,7 +5,7 @@ import Button from './Button'
 
 const Navbar = () => {
   return (
-    <nav className='header flex flex-row items-center justify-between px-10 py-5 shadow-[0_-1px_4px_#E2E2EA]'>
+    <nav className='header flex flex-row items-center justify-between p-6 md:px-10 md:py-5 shadow-[0_-1px_4px_#E2E2EA]'>
       <div className='logo flex flex-row justify-center items-center space-x-2'>
         <Image 
           src='/Subtract.png' 
