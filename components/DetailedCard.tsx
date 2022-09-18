@@ -17,7 +17,7 @@ const DetailedCard = ({price, location, rooms, reviews, reviewAmount, imgPath, h
       <div className="card-wrapper px-4 pt-4 pb-7 bg-white rounded-2xl">
         <div className="content-wrapper flex flex-col p-0">
           <div className="top-half flex flex-col justify-center items-start gap-5">
-            <div className="image w-60 h-40 rounded-2xl" style={{backgroundImage: `url(${imgPath})`}}></div>
+            <div className="image w-60 h-40 rounded-2xl bg-cover" style={{backgroundImage: `url(${imgPath})`}}></div>
             <div className="flex flex-row items-center gap-2">
               <div className="star-icon">
                 <img src="/star.png" alt="star for rating" />
