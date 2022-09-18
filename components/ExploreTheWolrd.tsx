@@ -4,12 +4,12 @@ import DetailedCard from "./DetailedCard"
 
 const ExploreTheWolrd = () => {
   return (
-    <div className="flex flex-col justify-center items-center py-10 px-32 gap-12 bg-[#FAFAFA]">
+    <div className="flex flex-col justify-center items-center py-10 px-32 gap-12 bg-[#FAFAFA] overflow-auto">
       <Headline
         title="Explore The World"
         subheading="10,788 beautiful places to go"
       />
-      <div className="slider flex flex-row justify-space-between items-center gap-10">
+      <div className="slider flex flex-row justify-between items-center gap-10 w-full">
         <DetailedCard
           price={210}
           location='Turkey, Mamaris'
