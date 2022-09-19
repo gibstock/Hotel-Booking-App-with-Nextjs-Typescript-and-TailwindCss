@@ -4,6 +4,7 @@ import ExploreTheWolrd from '../components/ExploreTheWolrd'
 import FeaturedDestinations from '../components/featured-destination/FeaturedDestinations'
 import Header from '../components/Header'
 import TrendingCities from '../components/trending-cities/TrendingCities'
+import Footer from '../components/Footer'
 
 const Home: NextPage = () => {
   return (
@@ -12,6 +13,7 @@ const Home: NextPage = () => {
       <FeaturedDestinations />
       <ExploreTheWolrd />
       <TrendingCities />
+      <Footer />
     </div>
   )
 }
