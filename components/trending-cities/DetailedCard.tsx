@@ -11,7 +11,7 @@ type AppProps = {
 const DetailedCard = ({price, location, reviews, reviewAmount, imgPath}: AppProps) => {
   return (
     <>
-      <div className="flex flex-col justify-center items-center p-4 bg-white rounded-3xl">
+      <div className="flex flex-col justify-center items-between p-4 bg-white rounded-3xl w-full lg:items-start">
         <div className="content-wrapper flex flex-row items-center p-0 gap-4">
           <div className="image rounded-2xl w-44 h-48 bg-cover" style={{backgroundImage: `url(${imgPath})`}}></div>
           <div className="content flex flex-col items-start gap-6">
