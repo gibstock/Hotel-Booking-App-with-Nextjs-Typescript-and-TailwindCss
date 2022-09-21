@@ -11,7 +11,7 @@ const FeaturedDestinations = () => {
         subheading="Popular destinations open to visitors from Indonesia"
       />
       {/* Card Content  */}
-      <div className="lg:grid lg:grid-cols-12 lg:grid-rows-12 gap-8 w-full flex flex-col items-center">
+      <div className=" flex flex-col items-center gap-8 w-full lg:grid lg:grid-cols-12 lg:grid-rows-12 ">
 
         {/* Left Group  */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-y-8 gap-x-14 col-span-9 row-span-12 w-full">
