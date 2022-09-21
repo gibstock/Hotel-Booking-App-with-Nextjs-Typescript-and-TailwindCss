@@ -47,7 +47,7 @@ const Modal = ({open, onClose}: AppProps) => {
               </div>
             </div>
 
-          <h1>SOmething else</h1>
+          <h1>Email auth coming soon...</h1>
         </div>
       
       </div>
