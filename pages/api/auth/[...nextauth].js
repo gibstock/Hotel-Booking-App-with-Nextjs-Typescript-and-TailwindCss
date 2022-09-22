@@ -20,12 +20,15 @@ export default NextAuth({
       }
     })
   ],
-  // session: {
-  //   strategy: 'jwt'
-  // },
-  // jwt: {
-  //   secret: 'lsjdf0s9fdjoasdfjajsdfoieifj',
-  // },
+  pages: {
+    signIn: '/auth/login',
+  },
+  session: {
+    strategy: 'jwt'
+  },
+  jwt: {
+    secret: 'lsjdf0s9fdjoasdfjajsdfoieifj',
+  },
   // callbacks: {
   //   async jwt({token, user}){
   //     if(user) {

@@ -1,8 +1,16 @@
+// import { getProviders, signIn } from 'next-auth/react'
+
+// type AppProps = {
+//   providers: {};
+// }
+
 import React from 'react'
 import Link from 'next/link'
 import {signIn, getProviders} from 'next-auth/react'
 import { BiXCircle} from 'react-icons/bi'
 import { AiOutlineGithub, AiOutlineGoogle} from 'react-icons/ai'
+import { useRouter } from 'next/router'
+
 
 type AppProps = {
   open: boolean;
@@ -10,14 +18,16 @@ type AppProps = {
   providers: {}
 }
 
-const Modal = ({open, onClose, providers}: AppProps) => {
+const Login = ({providers}: AppProps) => {
+const router = useRouter()
+
   console.log(providers)
-  // if(true) {
+  if(true) {
     return (
       <div className='fixed flex justify-center items-center w-screen h-full top-0 bottom-0 left-0 right-0 bg-[rgba(0,0,0,0.2)]'>
         <div className="flex flex-col content-between p10 w-[90%] max-w-[500px] bg-white box-border py-7 px-0 rounded-3xl gap-4">
           <div className="flex justify-center relative">
-            <div className='absolute flex justify-center items-center -top-9 -right-2 text-2xl font-medium cursor-pointer hover:text-[hsl(0,70%,70%)] bg-white rounded-full w-7 h-7' onClick={onClose}>
+            <div className='absolute flex justify-center items-center -top-9 -right-2 text-2xl font-medium cursor-pointer hover:text-[hsl(0,70%,70%)] bg-white rounded-full w-7 h-7' onClick={() => router.push('/')}>
               <BiXCircle />
             </div>
           </div>
@@ -30,7 +40,9 @@ const Modal = ({open, onClose, providers}: AppProps) => {
                     <Link  href='/api/auth/signin' key={provider.name}>
                       <a className='flex flex-row  justify-center items-center  gap-2 bg-primaryBtn text-white rounded-xl py-3 px-4 hover:bg-blue-800' onClick={(e) => {
                         e.preventDefault()
-                        signIn(provider.id)
+                        signIn(provider.id, {
+                          callbackUrl: `${window.location.origin}`
+                        })
                     }}>
                       {provider.id === 'github' && (
                         <>
@@ -69,11 +81,11 @@ const Modal = ({open, onClose, providers}: AppProps) => {
       
       </div>
     )
-  // }
+  }
   // return null
 }
 
-export default Modal
+export default Login
 
 export async function getServerSideProps(context: any) {
   const {req, res} = context
@@ -86,3 +98,31 @@ export async function getServerSideProps(context: any) {
     }
   }
 }
+
+// const Login = ({ providers }:AppProps) => {
+//   return (
+//     <>
+//     <h1>New Sign In Page</h1>
+//       {Object.values(providers).map((provider: any) => (
+//         <div key={provider.name}>
+//           <button onClick={() => signIn(provider.id)}>
+//             Sign in with {provider.name}
+//           </button>
+//         </div>
+//       ))}
+//     </>
+//   )
+// }
+
+// export default Login
+
+// export async function getServerSideProps(context: any) {
+//   const {req, res} = context
+//   const providers = await getProviders()
+
+//   return {
+//     props: { 
+//       providers 
+//     }
+//   }
+// }

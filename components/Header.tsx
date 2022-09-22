@@ -1,9 +1,9 @@
-import {useState} from 'react'
+// import {useState} from 'react'
 import Hero from './Hero'
 import Navbar from './Navbar'
 
 const Header = () => {
-  const [openModal, setOpenModal] = useState(false)
+  // const [openModal, setOpenModal] = useState(false)
 
   return (
     <div>
