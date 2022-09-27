@@ -2,7 +2,7 @@ import Headline from "./Headline"
 import DetailedCard from "./DetailedCard"
 
 
-const ExploreTheWolrd = () => {
+const ExploreTheWorld = () => {
   return (
     <div className="flex flex-col justify-center items-center py-10 px-32 gap-12 bg-[#FAFAFA] overflow-auto">
       <Headline
@@ -55,4 +55,4 @@ const ExploreTheWolrd = () => {
   )
 }
 
-export default ExploreTheWolrd
+export default ExploreTheWorld
